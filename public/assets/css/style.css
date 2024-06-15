@@ -24,24 +24,24 @@ ul ,li{list-style:none;}
 
 @font-face {
     font-family: 'rbold';
-    src: url('fonts/roboto-bold-webfont.woff2') format('woff2'),
-         url('fonts/roboto-bold-webfont.woff') format('woff');
+    src: url(../fonts/roboto-bold-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-bold-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'rregular';
-    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
-         url('fonts/roboto-regular-webfont.woff') format('woff');
+    src: url(../fonts/roboto-regular-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-regular-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
 	font-family:"rlight";
-	src:url("fonts/Roboto-Light.eot?") format("eot"),
-	url("fonts/Roboto-Light.woff") format("woff"),
-	url("fonts/Roboto-Light.ttf") format("truetype"),
-	url("fonts/Roboto-Light.svg#Roboto-Light") format("svg");
+	src:url(../fonts/Roboto-Light.eot?) format("eot"),
+	url(../fonts/Roboto-Light.woff) format("woff"),
+	url(../fonts/Roboto-Light.ttf) format("truetype"),
+	url(../fonts/Roboto-Light.svg#Roboto-Light) format("svg");
 	font-weight:normal;
 	font-style:normal;
 	}
