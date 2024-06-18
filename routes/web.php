@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Gamer\GamerController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -16,12 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [UserController::class, 'index'])->name('sign');
-Route::post('/auth', [LoginController::class, 'authenticate'])->name('auth');
+Route::get('/', function () {
+    Route::get('/', [UserController::class, 'index'])->name('sign');
+})->middleware(['auth'])->name('/');
 
-Route::get('/home', [GamerController::class, 'index'])->name('home');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/home', [GamerController::class, 'index'])->middleware(['auth'])->name('home');
+
+
+
+
+
+require __DIR__.'/auth.php';
