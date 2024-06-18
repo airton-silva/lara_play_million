@@ -4,6 +4,7 @@
 
 @section('content')
 <div class="conteudo">
+
     <div class="base-inicial">
         <div class="colunas">
             <div class="col">
