@@ -43,12 +43,12 @@
                             
                             <label>
                             <span>email</span>
-                            <input type="text" name="email" placeholder="Digite um email válido">
+                            <input type="text" name="email" placeholder="Digite um email válido" value="{{old('email')}}">
                             </label>
                             
                             <label>
                             <span>Nome /usuário</span>
-                            <input type="text" name="name" placeholder="Digite seu nome">
+                            <input type="text" name="name" placeholder="Digite seu nome" value="{{old('name')}}">
                             </label>
                             
                             <label>
