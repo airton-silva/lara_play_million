@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class GamerController extends Controller
 {
     function index() {
+        
         return view('home.index');
         
     }
