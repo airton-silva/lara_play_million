@@ -9,19 +9,19 @@
         <div class="colunas">
             <div class="col">
                 <div class="pergunta">
-                    <p>Qual ator imortalizou o personagem “Zé Bonitinho”?</p>
+                    <p>{{$question->question}}?</p>
                 </div>
                 <form method="post" action="index.php?link=2">
                 <ul class="opcoes">
-                    <li class="errado"><span class="num">1</span><input type="radio" name="escolha" value="A" id="a"><label for="a"><span>RONI CÓCEGAS</span></label></li>
-                    <li class="acertou"><span class="num">2</span><input type="radio" name="escolha" value="B" id="b"><label for="b"><span>JORGE LOREDO</span></label></li>
-                    <li class=""><span class="num">3</span><input type="radio" name="escolha" value="C" id="c"><label for="c"><span>DAVI PINHEIRO</span></label></li>
-                    <li class=""><span class="num">4</span><input type="radio" name="escolha" value="D" id="d"><label for="d"><span>ARNAUD RODRIGUES</span></label></li>
+                    <li class="errado"><span class="num">1</span><input type="radio" name="escolha" value="A" id="a"><label for="a"><span>{{$question->alternatives->letterA}}</span></label></li>
+                    <li class="acertou"><span class="num">2</span><input type="radio" name="escolha" value="B" id="b"><label for="b"><span>{{$question->alternatives->letterB}}</span></label></li>
+                    <li class=""><span class="num">3</span><input type="radio" name="escolha" value="C" id="c"><label for="c"><span>{{$question->alternatives->letterC}}</span></label></li>
+                    <li class=""><span class="num">4</span><input type="radio" name="escolha" value="D" id="d"><label for="d"><span>{{$question->alternatives->letterD}}</span></label></li>
                 </ul>
                 <ul class="painel">
-                    <li><span>10 mil </span><b>errar</b></li>
-                    <li><span>20 </span><b>parar</b></li>
-                    <li><span>30 mil </span><b>acertar</b></li>
+                    <li><span>{{$game->level->err}} </span><b>errar</b></li>
+                    <li><span>{{$game->level->stop}}</span><b>parar</b></li>
+                    <li><span>{{$game->level->correct}} </span><b>acertar</b></li>
                     <input type="hidden" name="perguntou" value="S">
                     
                     <li></li><li><input type="submit" class="but" value="PERGUNTAR"></li>
@@ -34,7 +34,7 @@
                 <div class="ajuda">
                     <div class="placar">
                         <p>PLACAR:</p>
-                        <b>20000</b>
+                        <b>{{$game->value_gain}}</b>
                     </div>
                     
                     <div class="colunas2">
