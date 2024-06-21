@@ -18,7 +18,7 @@ class CreateGamesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('level_id');
             $table->String('value_gain');
-            $table->String('finished');
+            $table->String('finished', 1)->default('N');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
 
