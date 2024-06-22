@@ -56,33 +56,23 @@
             
             
                 <div class="colunas">
+                    @foreach($rounds as $round)
                         <div class="col4 ativo">
                             <ul>
-                            <li><span>Fase 01</span></li>
-                            <li> 1 mil </li><li> 2 mil </li><li> 3 mil </li><li> 4 mil </li><li> 5 mil </li>								
+                                <li><span>Rodada {{$round->id}}</span></li>
+                                @foreach ($round->levels as $level)
+                                    @if ($round->id != 4)
+                                        <li class="{{$level->level==$game->level->level ? 'marcado' : ''}}">{{$level->level}}</li>
+                                        
+                                    @else
+                                        <li class="{{$level->level==$game->level->level ? 'marcado' : ''}}"><b><i class="milhao"></i>{{$level->level}}</b></li>
+                                    @endif
+                                @endforeach
+                           
                             </ul>
                         </div>	
-                                                <div class="col4 ativo">
-                            <ul>
-                            <li><span>Fase 02</span></li>
-                            <li> 10 mil </li><li> 20 mil </li><li class="marcado"> 30 mil </li><li> 40 mil </li><li> 50 mil </li>								
-                            </ul>
-                        </div>	
-                                                <div class="col4 ativo">
-                            <ul>
-                            <li><span>Fase 03</span></li>
-                            <li> 100 mil </li><li> 200 mil </li><li> 300 mil </li><li> 400 mil </li><li> 500 mil </li>								
-                            </ul>
-                        </div>	
-                                                <div class="col4 ativo">
-                            <ul>
-                            <li><span>Fase 04</span></li>
-                            <li><b><i class="milhao"></i>1MILHÃO</b></li>								
-                            </ul>
-                        </div>	
-                    
-                        
-                        
+                    @endforeach                
+                              
                 </div>
         </div>
     </div>
