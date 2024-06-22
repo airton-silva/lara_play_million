@@ -26,4 +26,14 @@ class Level extends Model
     {
         return $this->hasMany(Question::class);
     }
+
+    public function round()
+    {
+        return $this->belongsTo(Round::class);
+    }
+
+    function listLevelByRound($id_round) {
+       return $this->where('round_id', '=', $id_round)->first();
+        
+    }
 }
